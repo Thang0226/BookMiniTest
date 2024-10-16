@@ -7,6 +7,7 @@ public class Main {
         books[3] = new FictionBook("The Lord of the Rings", 1121, "J.R.R.Tolkien", "Fantasy");
         books[4] = new FictionBook("Harry Potter and the Sorcerer's Stone", 789, "J.K.Rowling", "Viễn tưởng 1");
         books[5] = new FictionBook("Dumb Luck", 345, "Vũ Trọng Phụng", "Literature");
+
         System.out.println("Book list:");
         for (int i = 0; i < books.length; i++) {
             System.out.printf("\t" + (i + 1) + ". Code: %-8s Name: %-40s Author: %s \n",
@@ -16,7 +17,6 @@ public class Main {
         System.out.println();
         System.out.println("Total price of books: " + bookSum(books));
         countBooks(books);
-
     }
 
     public static double bookSum(Book[] books) {
