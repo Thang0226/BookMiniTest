@@ -1,13 +1,19 @@
 public class Main {
     public static void main(String[] args) {
         Book[] books = new Book[6];
-        books[0] = new ProgrammingBook("0001", "Effective Java", 450, "Joshua Bloch", "Java", "Spring Boot");
-        books[1] = new ProgrammingBook("0002", "Clean Code", 1200, "Robert Martin", "Java", "Hibernate");
-        books[2] = new ProgrammingBook("0003", "C++ Primer", 1000, "Stanley Lippman", "C++", "Qt");
-        books[3] = new FictionBook("0004", "The Lord of the Rings", 1121, "J.R.R.Tolkien", "Fantasy");
-        books[4] = new FictionBook("0005", "Harry Potter and the Sorcerer's Stone", 789, "J.K.Rowling", "Viễn tưởng 1");
-        books[5] = new FictionBook("0006", "Dumb Luck", 345, "Vũ Trọng Phụng", "Literature");
+        books[0] = new ProgrammingBook("Effective Java", 450, "Joshua Bloch", "Java", "Spring Boot");
+        books[1] = new ProgrammingBook("Clean Code", 1200, "Robert Martin", "Java", "Hibernate");
+        books[2] = new ProgrammingBook("C++ Primer", 1000, "Stanley Lippman", "C++", "Qt");
+        books[3] = new FictionBook("The Lord of the Rings", 1121, "J.R.R.Tolkien", "Fantasy");
+        books[4] = new FictionBook("Harry Potter and the Sorcerer's Stone", 789, "J.K.Rowling", "Viễn tưởng 1");
+        books[5] = new FictionBook("Dumb Luck", 345, "Vũ Trọng Phụng", "Literature");
+        System.out.println("Book list:");
+        for (int i = 0; i < books.length; i++) {
+            System.out.printf("\t" + (i + 1) + ". Code: %-8s Name: %-40s Author: %s \n",
+                    books[i].getBookCode(), books[i].getName(), books[i].getAuthor());
+        }
 
+        System.out.println();
         System.out.println("Total price of books: " + bookSum(books));
         countBooks(books);
 

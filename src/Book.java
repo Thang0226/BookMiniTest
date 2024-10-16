@@ -1,4 +1,5 @@
 public class Book {
+    private static int bookCount = 0;
     private String bookCode;
     private String name;
     private double price;
@@ -36,8 +37,9 @@ public class Book {
         this.author = author;
     }
 
-    public Book(String bookCode, String name, double price, String author) {
-        this.bookCode = bookCode;
+    public Book(String name, double price, String author) {
+        bookCount++;
+        this.bookCode = "000" + bookCount;
         this.name = name;
         this.price = price;
         this.author = author;
